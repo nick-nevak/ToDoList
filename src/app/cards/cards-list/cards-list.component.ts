@@ -22,4 +22,12 @@ export class CardsListComponent implements OnInit {
       ).subscribe();
   }
 
+  updateCard(updatedCard: Card) {
+    this.cardsHttpService.updateCard(updatedCard)
+      .subscribe(x => {
+        debugger;
+      });
+
+  }
+
 }

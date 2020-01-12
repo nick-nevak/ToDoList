@@ -1,6 +1,6 @@
 <p>cards-list works!</p>
 <div *ngFor="let card of cards">
-    <app-card [card]="card"></app-card>
+    <app-card [card]="card" (cardUpdated)="updateCard($event)"></app-card>
 </div>
 
 

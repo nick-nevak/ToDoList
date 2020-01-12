@@ -17,13 +17,13 @@ export class CardsHttpService {
   getCards(): Observable<Card[]>{
     const result = this.httpClient.get<Card[]>(cardsUrl)
     .pipe(
-      tap(x => console.log(x)),
-      map(x =>{ 
-        var res = x.forEach(item => item.description = 'sosat')
-        return x;
-      })
+      tap(x => console.log(x))
     );
      return  result;
+  }
+
+  updateCard(card: Card): Observable<Card> {
+    return this.httpClient.put<Card>(`${cardsUrl}/${card.id}`, card);
   }
 
   // getCards(): Observable<Card[]> {

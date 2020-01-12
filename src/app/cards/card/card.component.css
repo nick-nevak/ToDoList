@@ -7,16 +7,10 @@
     margin-bottom: 4px;
 }
 
-.example-card {
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+mat-form-field{
+  display: block;
+}
 
-  ::ng-deep .mat-card-header-text {
-    /* CSS styles go here */
-    margin: 0px;
-  }
+button{
+  margin-left: 10px;
+}
