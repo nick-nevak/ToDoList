@@ -1,0 +1,22 @@
+/* :host {
+    border: 2px solid red;
+} */
+
+.content{
+    border: 3px solid red;
+    margin-bottom: 4px;
+}
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  ::ng-deep .mat-card-header-text {
+    /* CSS styles go here */
+    margin: 0px;
+  }
