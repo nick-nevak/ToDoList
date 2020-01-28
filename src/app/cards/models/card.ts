@@ -1,9 +1,12 @@
+import { Priority } from './priority';
+import { Color } from './color';
+
 export interface Card {
     id: number;
     name: string;
     description: string;
     status: boolean;
-    priority: number;
-    color: string;
     date: Date;
+    priorityID: number;
+    colorID: number;
 }

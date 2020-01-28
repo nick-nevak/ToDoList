@@ -1,6 +1,12 @@
-<p>cards-list works!</p>
-<div *ngFor="let card of cards">
-    <app-card [card]="card" (cardUpdated)="updateCard($event)"></app-card>
-</div>
+<app-card 
+    *ngFor="let card of cards" 
+    class="p-5"
+    [card]="card" 
+    [colors]="colors" 
+    [priorities]="priorities"
+    (cardUpdated)="updateCard($event)"
+    (cardDeleted)="deleteCard($event)"
+></app-card>
+
 
 

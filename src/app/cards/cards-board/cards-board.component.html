@@ -1,3 +1,28 @@
-<div class="col-12">
-    <app-cards-list></app-cards-list>
+<div>
+    <!-- <button mat-button (click)="createCard()">Create</button> -->
+    <div class="d-flex justify-content-center m-4">
+        <button mat-fab color="primary" (click)="createCard()">
+            <span style="font-size: 50px; font-weight:normal;">+</span>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <app-card 
+            *ngIf="isCreating"
+            [card]="undefined"
+            [colors]="colors" 
+            [priorities]="priorities"
+            (cardUpdated)="cardCreated($event)"
+            (cardDeleted)="cancelCreation()">
+        </app-card>
+    </div>
+
+    <app-cards-list 
+        class="d-flex justify-content-around flex-wrap"
+        [cards]="cards" 
+        [colors]="colors" 
+        [priorities]="priorities"
+        (cardUpdated)="updateCard($event)"
+        (cardDeleted)="deleteCard($event)"
+    ></app-cards-list>
 </div>
